@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-:root {
+/* :root {
   --clrA: hsl(29, 52%, 80%);
   --clrB: hsl(26, 36%, 61%);
   --clrC: hsl(15, 46%, 22%);
@@ -12,11 +12,23 @@
   --clrE: #956b57;
   --clrF: #4c6c74;
   --clrG: #3a4a4d;
+} */
+
+:root {
+    --clrA: #ffb56b;
+    --clrB: #d8a443;
+    --clrC: #6777b2;
+    --clrD: #202842;
 }
 
-body {
-    padding: 2em 4em;
+.container {
+    width: 80vmin;
+    height: 80vmin;
+    border: 1px solid #444;
+    margin: 10vmin auto;
 }
+
+/* Old version */
 
 .bbClock {
   width: 400px;
@@ -167,4 +179,23 @@ body {
     width: 3px;
     background-color: #777;
     margin: -8px auto;
+}
+
+/* New version */
+.a {
+    background-color: var(--clrD);
+    width: 10%;
+    height: 20%;
+    position: relative;
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+
+}
+
+.aIn {
+    position: absolute;
+    background-color: var(--clrC);
+    /* width: 100%; */
+    /* height: 100%; */
+    inset: 10px;
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
 }
